@@ -1,5 +1,4 @@
 <?php
-// include 'config/config.php';
 include 'partials/Header.php';
 ?>
 
@@ -25,7 +24,55 @@ Lucas Mitchell</p>
 
 </section>
 
+<div class="slider">
+	<div class="slider-wrapper">
+		<div class="slide">
+			<img src="assets/images/1.jpg" alt="">
+		</div>
 
+		<div class="slide">
+			<img src="assets/images/2.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/3.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/4.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/5.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/6.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/7.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/8.jpg" alt="">
+		</div>
+	
+		<div class="slide">
+			<img src="assets/images/9.jpg" alt="">
+		</div>
+
+		<div class="slide">
+			<img src="assets/images/10.jpg" alt="">
+		</div>
+
+
+	</div>
+</div>
+
+
+
+    
 
 
 

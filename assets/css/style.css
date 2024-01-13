@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+h1-h6, p {
+    color: #1E1E1E;
+    font-family: 'Commit Mono', monospace;
+}
+
+
+
+@font-face {
+    font-family: 'Commit Mono';
+    src: url('../fonts/CommitMono-400-Regular.otf') format('truetype');
+    
+  }
+
+  
+@font-face {
+    font-family: 'Manolo Mono';
+    src: url('../fonts/manolo-mono.ttf') format('truetype');
+    
+  }
+
+  
+  
+  
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/hero.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* scroll animation */
+
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapper{
+    position: absolute;
+    width: 6000px;
+    padding: 0 600px;
+    height: 100%;
+    display: flex;
+    align-items:center ;
+    gap: 100px;
+}
+
+.slide{
+    width: 400px;
+}
+
+.slide>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
