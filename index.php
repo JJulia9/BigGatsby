@@ -128,13 +128,11 @@ Emma Clark
 	</div>
 </div>
 
+<div class="background-svg1">
+
 
 <h2 class="main-header">What's on</h2>
 
-
-<svg xmlns="http://www.w3.org/2000/svg" width="1321" height="1022" viewBox="0 0 1321 1022" fill="none">
-  <path d="M1445.4 318.016C1515.13 365.682 1564.31 444.48 1548.2 527.393C1493.5 808.834 1420.11 1044.36 848.154 1020.25C180.817 992.117 1076.43 376.308 268.55 373.045C-539.326 369.782 695.977 -80.2829 1136.79 13.4155C1517.03 94.2374 1253.53 186.856 1445.4 318.016Z" fill="#960B17"/>
-</svg>
 	
 <div class="home-grid">
 
@@ -152,6 +150,7 @@ Emma Clark
 	</div>
 
 	<div class="grid-item4">
+		<img src="assets/images/februaryEvents.png" alt="" sizes="" srcset="">
 		<p>february events</p>
 	</div>
 
@@ -161,10 +160,12 @@ Emma Clark
 
 </div>
 
+<p class="section-header">
+	ticles ar </p>
+
+</div>
+
 <section class="blog">
-	<h2 class="section-header">
-	ticles ar
-    </h2>
 
 	<div class="blog-wrapper">
 		<div class="blog-img">
@@ -176,22 +177,34 @@ Emma Clark
 			<hr>
 			<div class="article">
 			<p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38" fill="none">
+<path d="M2.95898 16.25C1.57827 16.25 0.458984 17.3693 0.458984 18.75C0.458984 20.1307 1.57827 21.25 2.95898 21.25V16.25ZM42.8121 20.5178C43.7884 19.5415 43.7884 17.9585 42.8121 16.9822L26.9021 1.07233C25.9258 0.0960197 24.3429 0.0960197 23.3666 1.07233C22.3903 2.04864 22.3903 3.63155 23.3666 4.60786L37.5088 18.75L23.3666 32.8921C22.3903 33.8684 22.3903 35.4514 23.3666 36.4277C24.3429 37.404 25.9258 37.404 26.9021 36.4277L42.8121 20.5178ZM2.95898 21.25H41.0443V16.25H2.95898V21.25Z" fill="#960B17"/>
+</svg>
+		</div>
 
 			<hr>
 			<div class="article">
 			<p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38" fill="none">
+<path d="M2.95898 16.25C1.57827 16.25 0.458984 17.3693 0.458984 18.75C0.458984 20.1307 1.57827 21.25 2.95898 21.25V16.25ZM42.8121 20.5178C43.7884 19.5415 43.7884 17.9585 42.8121 16.9822L26.9021 1.07233C25.9258 0.0960197 24.3429 0.0960197 23.3666 1.07233C22.3903 2.04864 22.3903 3.63155 23.3666 4.60786L37.5088 18.75L23.3666 32.8921C22.3903 33.8684 22.3903 35.4514 23.3666 36.4277C24.3429 37.404 25.9258 37.404 26.9021 36.4277L42.8121 20.5178ZM2.95898 21.25H41.0443V16.25H2.95898V21.25Z" fill="#960B17"/>
+</svg>	
+		</div>
 
 			<hr>
 			<div class="article">
 			<p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38" fill="none">
+<path d="M2.95898 16.25C1.57827 16.25 0.458984 17.3693 0.458984 18.75C0.458984 20.1307 1.57827 21.25 2.95898 21.25V16.25ZM42.8121 20.5178C43.7884 19.5415 43.7884 17.9585 42.8121 16.9822L26.9021 1.07233C25.9258 0.0960197 24.3429 0.0960197 23.3666 1.07233C22.3903 2.04864 22.3903 3.63155 23.3666 4.60786L37.5088 18.75L23.3666 32.8921C22.3903 33.8684 22.3903 35.4514 23.3666 36.4277C24.3429 37.404 25.9258 37.404 26.9021 36.4277L42.8121 20.5178ZM2.95898 21.25H41.0443V16.25H2.95898V21.25Z" fill="#960B17"/>
+</svg>	
+		</div>
 
 			<hr>
 			<div class="article">
 			<p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38" fill="none">
+<path d="M2.95898 16.25C1.57827 16.25 0.458984 17.3693 0.458984 18.75C0.458984 20.1307 1.57827 21.25 2.95898 21.25V16.25ZM42.8121 20.5178C43.7884 19.5415 43.7884 17.9585 42.8121 16.9822L26.9021 1.07233C25.9258 0.0960197 24.3429 0.0960197 23.3666 1.07233C22.3903 2.04864 22.3903 3.63155 23.3666 4.60786L37.5088 18.75L23.3666 32.8921C22.3903 33.8684 22.3903 35.4514 23.3666 36.4277C24.3429 37.404 25.9258 37.404 26.9021 36.4277L42.8121 20.5178ZM2.95898 21.25H41.0443V16.25H2.95898V21.25Z" fill="#960B17"/>
+</svg>	
+		</div>
 
 		</div>
 	</div>
