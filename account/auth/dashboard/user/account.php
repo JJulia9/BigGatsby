@@ -5,11 +5,12 @@
 
 
 
+<div class="accountWrapper">
 <p class="section-header">
 	personal info </p>
 
     <form class="accountForm">
-
+    
     <div class="personalInfo">
         <label class="username"> Username</label>
         <p> <?= $_SESSION['username'] ?> </p>
@@ -30,11 +31,13 @@
 
 </form>
 
-<a> 
+<a class="signOut"> 
     <img src="<?= BASE_PATH?>assets/images/signOut.svg" alt="" srcset="">
-    <button class="signOut">Sigh out</button></a>
+    Sigh out</a>
 
+    </div>
 
+    
 <?php 
   include '../../../../partials/Footer.php';
 ?>

@@ -310,9 +310,11 @@ font-weight: 400;
 line-height: normal;
 text-align: justify;
 letter-spacing: 3vw;
-margin: 5rem 0rem;
 }
 
+.background-svg1 .header{
+    margin: 5rem 0rem;
+}
 
 .blog-wrapper{
     display: flex;
@@ -354,7 +356,7 @@ footer{
     width: 60%;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2rem 0rem;
+    margin: 3rem 0rem;
 
 }
 
@@ -393,4 +395,40 @@ margin-top: 25px;
 }
 
 /* personal info */
+
+.accountForm{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-family: "commit mono";
+    color: #1E1E1E;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    justify-content: space-evenly;
+    margin-top: 5vw;
+    margin-bottom: 6vw;
+}
+
+.accountWrapper >.section-header{
+    -webkit-text-stroke-color: #960B17;
+    font-size: 7vw;
+    text-align: center;
+}
+
+.accountWrapper{
+    position: relative;
+}
+.signOut{
+    position: absolute;
+    right: 0;
+    color: #960B17;
+    font-family: "commit mono";
+    font-weight: 700;
+    margin: 2vw 5vw;
+    
+}
+
 
