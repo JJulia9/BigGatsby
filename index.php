@@ -16,7 +16,9 @@ accounts, and comments.
 
 
 <?php
+session_start();
 include 'partials/Header.php';
+include 'account/auth/dbConfig.php';
 ?>
 
 <section class="hero">

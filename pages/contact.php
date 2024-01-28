@@ -1,4 +1,5 @@
 <?php include '../partials/Header.php'; ?>
+<?php include '../partials/Navigation.php'; ?>
 
 <div class="contactWrapper">
 <div class="lineBox">

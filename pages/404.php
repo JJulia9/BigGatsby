@@ -10,7 +10,7 @@ include '../partials/Header.php';
 
 <h3>Oops! The page you are looking for could not be found.</h3>
 
-<button class="homePage">HOME PAGE</button>
+ <a href="<?= BASE_PATH ?>home"><button class="homePage">HOME PAGE</button></a>
 </div>
 </div>
 
