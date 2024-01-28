@@ -8,11 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="<?= BASE_PATH ?>assets/css/events.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?= BASE_PATH ?>assets/css/style.css?v=<?php echo time(); ?>">
-
     
 </head>
-<body>
+<body class="loading">
     
 
 	
+    

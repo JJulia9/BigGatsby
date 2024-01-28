@@ -5,12 +5,13 @@
 
 </footer>
 
-<!-- <script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/demo.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript"  src="<?= BASE_PATH ?>assets/js/script.js"></script>
+<script src="<?= BASE_PATH ?>assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="<?= BASE_PATH ?>assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="<?= BASE_PATH ?>assets/js/events.js"></script>
+<script type="text/javascript" src="<?= BASE_PATH ?>assets/js/script.js"></script>
 
 </body>
 </html>
