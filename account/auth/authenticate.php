@@ -31,13 +31,14 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM theatre.users WHE
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
+            $_SESSION['email'] = $_POST['email'];
             $_SESSION['id'] = $id;
             $_SESSION['is_admin'] = $admin;
             if ($admin == 1) {
-                header('Location: ../../');
+                header('Location: ../../a/dashboard');
             }
             else{
-                header('Location: ../../u/dashboard');
+                header('Location: ../../u/account');
             }
             exit();
 
@@ -51,3 +52,7 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM theatre.users WHE
 
 
 }
+
+
+
+

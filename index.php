@@ -1,6 +1,6 @@
-<!-- Users should be able to register on the website with a unique username, password, and
+<!-- +Users should be able to register on the website with a unique username, password, and
 email address. Password strength will be checked.
-- Registered users should be able to log in with their credentials.
+- +Registered users should be able to log in with their credentials.
 - Registered users should have access to a profile page where they can view their account
 information.
 - Admins should be the only ones allowed to create and edit new blog articles.

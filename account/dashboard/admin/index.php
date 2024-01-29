@@ -1,4 +1,4 @@
-<?php include '../../../../partials/Header.php'; ?>
+<?php include '../../../partials/Header.php'; ?>
 
 <!-- component -->
 <body class="font-poppins antialiased">
@@ -110,11 +110,12 @@
 
 
             <a
-              href=""
+              href="<?=BASE_PATH?>logout"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
-              <img src="<?BASE_PATH?>assets/images/signOut.svg">
-              <span class="">Sign out</span>
+              <img src="<?=BASE_PATH?>assets/images/signOut.svg" width="20px" height="20px" class="w-6 h-6 fill-current inline-block"
+                fill="currentColor">
+               <span class="">Sign out</span>
             </a>
           </div>
         </div>

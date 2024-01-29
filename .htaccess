@@ -24,6 +24,8 @@ RewriteRule ^blogs$ pages/blog/index.php [L]
 RewriteRule ^events$ pages/events/index.php [L]
 RewriteRule ^contact$ pages/contact.php [L]
 RewriteRule ^blogDetails/([0-9]+)$ pages/blog/details.php?blog_id=$1 [L]
+RewriteRule ^logout$ account/auth/logout.php [L]
+
 
 
 # User Navigation

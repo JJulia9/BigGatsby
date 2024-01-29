@@ -5,12 +5,11 @@
 
 <div class="login-container">
 	<section id="content">
-		<form action="../account/auth/authenticate.php" method="post">
+		<form action="<?=BASE_PATH?>account/auth/authenticate.php" method="post">
 			<h1>Hello again!</h1>
-            <h3>Enter your email and you password to confirm your identity</h3>
+            <h3>Enter your username and you password to confirm your identity</h3>
 			<div>
-            
-				<input type="text" placeholder="Email" required="" id="email" name="email" />
+				<input type="text" placeholder="Username" required="" id="username" name="username" />
 			</div>
 			<div>  
                
