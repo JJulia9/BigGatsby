@@ -51,7 +51,7 @@
           
           <div id="menu" class="flex flex-col space-y-2">
             <a
-              href=""
+              href="<?=BASE_PATH?>a/addBlog"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
             >
               <svg
@@ -69,7 +69,7 @@
 
            
             <a
-              href=""
+              href="<?=BASE_PATH?>a/pendingComments"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <svg
@@ -85,12 +85,12 @@
                   d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
                 ></path>
               </svg>
-              <span class="">Coments</span>
+              <span class="">Comments</span>
             </a>
            
            
             <a
-              href=""
+              href="<?=BASE_PATH?>a/allUsers"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <svg

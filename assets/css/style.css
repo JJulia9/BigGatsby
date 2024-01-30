@@ -618,14 +618,22 @@ footer{
     width: 60%;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 4rem 0rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
 
+}
+
+footer div{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 footer a{
     color: #1E1E1E;
     text-decoration: none;
     font-family: "commit mono";
+    padding-left: 10px;
     
      
 }
@@ -813,7 +821,7 @@ margin: 2rem 0rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+  justify-content: center;
   background-image: url(../images/articlesBack.svg)  ;
   background-size: cover;
 }
@@ -829,12 +837,17 @@ margin: 2rem 0rem;
 
 }
 
-
-
-.articleText h3, p{
+.articleText h3  {
   font-family: 'commit mono' monospace;
   color: #1E1E1E;
   padding: 15px;
+  
+}
+
+.articleText p {
+  font-family: 'commit mono' monospace;
+  color: #1E1E1E;
+  
   
 }
 
@@ -859,7 +872,14 @@ margin: 2rem 0rem;
   margin: 5rem 0rem;
 }
 
+
+.articleImg{
+  width: 40%;
+}
+
 .articleImg img{
+  width: 100%;
   opacity: 0.9;
   border-radius: 10px;
+
 }

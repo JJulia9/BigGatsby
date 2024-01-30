@@ -1,7 +1,17 @@
 <footer>
-    <a href="tel:+4474357575757"><img src="<?= BASE_PATH ?>assets/images/phone.png" alt="">+44743 5757 5757</a> 
-    <a href="mailto:bigGatsby@gmail.com"><img src="<?= BASE_PATH ?>assets/images/email.png" alt="">bigGatsby@gmail.com</a> 
-    <a href="https://www.instagram.com/big_Gatsby"><img src="<?= BASE_PATH ?>assets/images/instagram.png" alt="">big_Gatsby</a> 
+    <div class="">
+<img src="<?= BASE_PATH ?>assets/images/phone.png" alt=""> <a href="tel:+4474357575757">+44743 5757 5757</a> 
+</div>
+
+<div class="">
+<img src="<?= BASE_PATH ?>assets/images/email.png" alt="">
+    <a href="mailto:bigGatsby@gmail.com">bigGatsby@gmail.com</a> 
+</div>
+
+<div class="">
+<img src="<?= BASE_PATH ?>assets/images/instagram.png" alt="">
+    <a href="https://www.instagram.com/big_Gatsby">big_Gatsby</a> 
+    </div>
 
 </footer>
 
