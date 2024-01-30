@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     // Note: You might not want to display the password directly on the page for security reasons.
 } else {
     // User is not logged in, redirect to login page
-    header('Location: login.php');
+    header('Location: login');
     exit;
 }
 ?>

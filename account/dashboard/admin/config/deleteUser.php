@@ -11,6 +11,6 @@
     $deleteUserBlog->execute();
     $deleteUser->execute();
 
-    header('Location: a/allUsers');
+    header('Location: ../../../../a/allUsers');
 
     ?>

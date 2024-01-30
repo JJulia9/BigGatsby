@@ -13,4 +13,4 @@ $stmt = $conn->prepare('UPDATE users usr
     where id = '.$uid.' ');
 
 $stmt->execute();
-header("Location: a/allUsers");
+header("Location: ../../a/allUsers");

@@ -29,15 +29,16 @@ RewriteRule ^logout$ account/auth/logout.php [L]
 
 
 # User Navigation
-RewriteRule ^u/dashboard$ account/dashboard/user/index.php [L]
-RewriteRule ^u/comments$ account/dashboard/user/userComments.php [L]
+RewriteRule ^u/dashboard$ account/dashboard/user/account.php [L]
+RewriteRule ^u/comments$ account/dashboard/user/index.php [L]
 RewriteRule ^u/account$ account/dashboard/user/account.php [L]
 
 
 
 #Admin Navigation
 RewriteRule ^a/dashboard$ account/dashboard/admin/index.php [L]
-RewriteRule ^a/allUsers$ account/dashboard/admin/pages/addUser.php [L]
+RewriteRule ^a/allUsers$ account/dashboard/admin/pages/user.php [L]
+RewriteRule ^a/addUsers$ account/dashboard/admin/pages/addUser.php [L]
 RewriteRule ^a/addBlog$ account/dashboard/admin/pages/addBlog.php [L]
 RewriteRule ^a/pendingComments$ account/dashboard/admin/pages/pendingComments.php [L]
 RewriteRule ^a/commentDetails/([0-9]+)$ account/dashboard/admin/pages/commentDetails.php?cid=$1 [L]

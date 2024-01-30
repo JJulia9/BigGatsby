@@ -9,5 +9,5 @@ $stmt = $conn->prepare('UPDATE blog b
     where b.id = '.$bid.' ');
 
 $stmt->execute();
-header("Location: blogs");
+header("Location: ../../../../blogs");
 ?>

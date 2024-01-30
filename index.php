@@ -4,9 +4,9 @@ email address. Password strength will be checked.
 - +Registered users should have access to a profile page where they can view their account
 information.
 - Admins should be the only ones allowed to create and edit new blog articles.
-- Users should be able to click on specific events to access detailed information.
+- + Users should be able to click on specific events to access detailed information.
 - Admin can edit comments and publish them.
-- Registered users should have the ability to leave comments on events and articles.
+- +Registered users should have the ability to leave comments on events and articles.
 - +Admins should have access to a secure dashboard for managing blog articles, user
 accounts, and comments.
 - Admins should be able to make user accounts inactive.

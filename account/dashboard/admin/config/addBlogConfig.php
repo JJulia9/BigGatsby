@@ -54,6 +54,6 @@
         $statusMsg = 'Please select a file to upload.';
     }
 
-    header("Location: blogs");
+    header("Location: ../../../../blogs");
 
 ?>
