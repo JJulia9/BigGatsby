@@ -24,6 +24,8 @@
    LEFT JOIN blog b on ub.fk_blog_id = b.id 
 
     WHERE pending = 1
+    AND c.id = '.$cid.'
+    
     ');
     $commentDetails->execute();
     $commentDetails->store_result();

@@ -199,40 +199,8 @@ $blogs->bind_result($blogId, $title, $blogContent, $createdOn, $imgPath, $showNa
                         <td><?= $showName ?></td>
                         <td><?= $published ? 'Yes' : 'No' ?></td>
                         <td>
-                            <div class="flex justify-end gap-4">
-                                <a class="delete-id" href="#" onclick="window.location.href='deleteBlog/<?= $blogId ?>'">
-                                    <button x-data="{ tooltip: 'Delete' }" class="delete-btn">
-
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="1.5"
-                                            stroke="currentColor"
-                                            class="h-6 w-6"
-                                            x-tooltip="tooltip"
-                                        >
-                                            <!-- Path for delete icon -->
-                                        </svg>
-                                    </button>
-                                </a>
-                                <button>
-                                    <a x-data="{ tooltip: 'Edit' }" onclick="window.location.href='editBlog/<?=$blogId?>';">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="1.5"
-                                            stroke="currentColor"
-                                            class="h-6 w-6"
-                                            x-tooltip="tooltip"
-                                        >
-                                            <!-- Path for edit icon -->
-                                        </svg>
-                                    </a>
-                                </button>
-                                <!-- Additional buttons for managing blogs as needed -->
-                            </div>
+                        <i class="fa-solid fa-trash" onclick="window.location.href='deleteBlog/<?= $blogId ?>'"></i>
+                        <i class="fa-solid fa-edit" onclick="window.location.href='editBlog/<?= $blogId ?>'"></i>
                         </td>
                     </tr>
                 <?php endwhile ?>

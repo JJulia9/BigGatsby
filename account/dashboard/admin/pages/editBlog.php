@@ -9,7 +9,30 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-$blogId = $_GET['blogId'];
+
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: ../login/');
+    exit;
+}
+
+// Check if 'bid' parameter is set in the URL
+if (isset($_GET['bid'])) {
+    $blogId = $_GET['bid'];
+
+    // Validate and sanitize $blogId
+    $blogId = filter_var($blogId, FILTER_VALIDATE_INT);
+    if ($blogId === false) {
+        // Handle invalid $blogId, perhaps redirect or show an error message
+        exit("Invalid blog ID");
+    }
+
+    // Rest of your code to retrieve blog information based on $blogId
+} else {
+    // Handle the case where 'bid' is not set
+    exit("Blog ID not provided");
+}
+
+$blogId = $_GET['bid'];
 
 // Validate and sanitize $blogId
 $blogId = filter_var($blogId, FILTER_VALIDATE_INT);
@@ -159,14 +182,25 @@ $blog->fetch();
 
 
 
-      <form action="<?=BASE_PATH?>account/dashboard/admin/config/editBlogConfig.php" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="blogId" value="<?= $blogId ?>">
-    <label>Title: <input type="text" value="<?= $title ?>" name="title"></label>
-    <label>Content: <textarea name="blog_content"><?= $blogContent ?></textarea></label>
-    <label>Image Path: <input type="text" value="<?= $imgPath ?>" name="img_path"></label>
-    <label>Show Name: <input type="text" value="<?= $showName ?>" name="show_name"></label>
-    <label>Published: <input type="checkbox" <?= $published ? 'checked' : '' ?> name="published"></label>
-    <input type="submit" class="submit" value="Update Blog">
+      <form action="<?=BASE_PATH?>account/dashboard/admin/config/editBlogConfig.php?uid=<?= $bid ?>" method="post" enctype="multipart/form-data" class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
+      <div class="heading text-center font-bold text-2xl m-5 text-gray-800">Edit Blog</div>    
+
+    <input type="hidden" name="bid" value="<?= $blogId ?>">
+
+    <label>Title:</label>
+    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" type="text" value="<?= $title ?>" name="title">
+
+    <label>Content: </label>
+    <textarea class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" name="blog_content"><?= $blogContent ?></textarea>
+
+    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Event name" type="file" name="img_path">
+
+    <label>Show Name: </label>
+    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" type="text" value="<?= $showName ?>" name="show_name">
+
+    
+
+    <input class=" p-1 px-4 font-semibold cursor-pointer text-red-800" type="submit" class="submit" value="Update Blog">
 </form>
 
 

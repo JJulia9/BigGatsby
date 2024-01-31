@@ -7,14 +7,17 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $blogId = $_POST['bId'];
-    $title = $_POST['title'];
-    $blogContent = $_POST['blog_content'];
-    $imgPath = $_POST['img_path'];
-    $showName = $_POST['show_name'];
-    $published = isset($_POST['published']) ? 1 : 0;
+    $blogId = $_GET['bid'];
+    $blogId = filter_var($blogId, FILTER_VALIDATE_INT);
+
+    if ($blogId === false) {
+        // Handle invalid $blogId, perhaps redirect or show an error message
+        exit("Invalid blog ID");
+    }
+
+    // Handle file upload
+    $imgPath = $_FILES['img_path']['name'];
 
     // Validate and sanitize input values if needed
 
@@ -24,8 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $updateBlog->execute();
     $updateBlog->close();
 
-    // Redirect to a confirmation page or wherever needed
-    header('Location: ../../../../a/allBlogs ');
-    exit;
-} 
+    // Move the uploaded file to the desired destination
+    move_uploaded_file($_FILES['img_path']['tmp_name'], 'path_to_upload_directory/' . $imgPath);
 
+    // Redirect to a confirmation page or wherever needed
+    header('Location: ../../../../a/allBlogs');
+    exit;
+}
+?>

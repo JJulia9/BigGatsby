@@ -166,6 +166,7 @@ $users->fetch();
 <input  class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" type="text" value="<?= $active ?>" name="active"> -->
 <label>Email</label>
 <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" type="text" value="<?= $email ?>" name="email">
+
 <input   class=" p-1 px-4 font-semibold cursor-pointer text-red-800" type="submit" class="submit">
 </form>
 

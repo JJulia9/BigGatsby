@@ -52,7 +52,8 @@ RewriteRule ^a/activateUser/([0-9]+)$ account/dashboard/admin/config/activateUse
 RewriteRule ^a/editUser/([0-9]+)$ account/dashboard/admin/pages/editUser.php?uid=$1 [L]
 
 RewriteRule ^a/deleteBlog/([0-9]+)$ account/dashboard/admin/components/blogDeletePopup.php?bid=$1 [L]
-RewriteRule ^a/editBlog/([0-9]+)$ account/dashboard/admin/pages/editBlog.php?uid=$1 [L]
+
+RewriteRule ^a/editBlog/([0-9]+)$ account/dashboard/admin/pages/editBlog.php?bid=$1 [L]
 
 
 
