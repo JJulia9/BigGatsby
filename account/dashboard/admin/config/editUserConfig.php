@@ -7,33 +7,43 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
+
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $uid = $_GET['uid'];
+$uid = filter_var($uid, FILTER_VALIDATE_INT);
+if ($uid === false) {
+    // Handle invalid $uid, perhaps redirect or show an error message
+    exit("Invalid user ID");
+}
+
     $username = $_POST['username'];
-    $is_active = $_POST['active'];
     $email = $_POST['email'];
 
     // Validate and sanitize input values
    
     $username = filter_var($username, FILTER_SANITIZE_STRING);
-    $is_active = filter_var($is_active, FILTER_VALIDATE_INT);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-    if ( $username === false || $is_active === false || $email === false) {
+    if ( $username === false  || $email === false) {
         // Handle invalid input, perhaps redirect or show an error message
+
         exit("Invalid input values");
     }
 
     // Update user in the database
-    $updateUser = $conn->prepare('UPDATE users SET username = ?, active = ?, email = ? WHERE id = ?');
-    $updateUser->bind_param('sis', $username, $is_active, $email);
+    $updateUser = $conn->prepare('UPDATE users SET username = ?,  email = ? WHERE id = ?');
+    $updateUser->bind_param('sss', $username,  $email, $uid);
+
     $updateUser->execute();
 
+    $updateUser->close();
+
+
     // Redirect to a confirmation page or wherever needed
-    header('Location: a/allUsers ');
+    header('Location: ../../../../a/allUsers');
     exit;
-} else {
-    // Redirect to the appropriate page if accessed without a POST request
-    header('Location: a/allUsers');
-    exit;
-}
+
+} 
 ?>

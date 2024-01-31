@@ -1,7 +1,7 @@
 <?php 
     session_start(); 
     include '../../../auth/dbConfig.php';
-    include '../../../../partials/Header.php'
+    include '../../../../partials/Header.php';
 ?>
 
 
@@ -56,7 +56,7 @@
           
           <div id="menu" class="flex flex-col space-y-2">
             <a
-              href="<?=BASE_PATH?>a/addBlog"
+              href="<?=BASE_PATH?>a/allBlogs"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
             >
               <svg

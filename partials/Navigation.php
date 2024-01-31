@@ -16,7 +16,10 @@
   			<li><a href="<?= BASE_PATH ?>contact">Contact</a></li>
 			<li><a href="<?= BASE_PATH ?>u/account">Account</a></li>
 	
-		
+						
+			<?php if ($_SESSION['is_admin'] == 1): ?>
+			<li><a href="<?= BASE_PATH ?>a/allUsers">Dashboard</a></li>
+			<?php endif ?>
 
 			<?php endif ?>
                     

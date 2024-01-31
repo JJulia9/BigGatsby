@@ -1,4 +1,42 @@
-<?php include '../../../../partials/Header.php'; ?>
+<?php
+session_start();
+include '../../../auth/dbConfig.php';
+include '../../../../partials/Header.php';
+
+
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: ../login/');
+    exit;
+}
+
+$blogId = $_GET['blogId'];
+
+// Validate and sanitize $blogId
+$blogId = filter_var($blogId, FILTER_VALIDATE_INT);
+if ($blogId === false) {
+    // Handle invalid $blogId, perhaps redirect or show an error message
+    exit("Invalid blog ID");
+}
+
+$blog = $conn->prepare('SELECT 
+        b.id,
+        b.title,
+        b.blog_content,
+        b.img_path,
+        b.show_name,
+        b.published 
+       FROM blog b
+       WHERE b.id = ?');
+
+$blog->bind_param('i', $blogId);
+$blog->execute();
+$blog->store_result();
+$blog->bind_result($blogId, $title, $blogContent, $imgPath, $showName, $published);
+$blog->fetch();
+?>
+
+
+
 
 <!-- component -->
 <body class="font-poppins antialiased">
@@ -106,9 +144,6 @@
               <span class="">Users accounts</span>
             </a>
 
-
-
-
             <a
               href="<?=BASE_PATH?>logout"
               class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
@@ -122,32 +157,19 @@
       </div>
      
 
-<!-- component -->
 
 
-  
-  <form action="../account/dashboard/admin/config/addBlogConfig.php" method="post" enctype="multipart/form-data" class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
-  <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Blog</div>
-    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="text" name="title">
-    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Event name" type="textle" name="show_name">
-    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Event name" type="file" name="img_path">
-    <textarea class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe event here" name="blog_content"></textarea>
-    <!-- icons -->
-    <div class="icons flex text-gray-500 m-2">
-      
-      
-      <div class="count ml-auto text-gray-400 text-xs font-semibold">0/300</div>
-    </div>
-    <!-- buttons -->
-    
-      
-      <input type="submit" name="submit" 
-       class=" p-1 px-4 font-semibold cursor-pointer text-red-800">
-    
-    </form>
-  
+      <form action="<?=BASE_PATH?>account/dashboard/admin/config/editBlogConfig.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="blogId" value="<?= $blogId ?>">
+    <label>Title: <input type="text" value="<?= $title ?>" name="title"></label>
+    <label>Content: <textarea name="blog_content"><?= $blogContent ?></textarea></label>
+    <label>Image Path: <input type="text" value="<?= $imgPath ?>" name="img_path"></label>
+    <label>Show Name: <input type="text" value="<?= $showName ?>" name="show_name"></label>
+    <label>Published: <input type="checkbox" <?= $published ? 'checked' : '' ?> name="published"></label>
+    <input type="submit" class="submit" value="Update Blog">
+</form>
 
 
-    </div>
+
+</div>
   </body>
-    

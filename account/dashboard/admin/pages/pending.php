@@ -2,7 +2,7 @@
     session_start();
     include '../../../auth/dbConfig.php';
     include '../../../../partials/Header.php';
-    include '../../../../partials/Navigation.php';
+   
 
     $blogID = $_GET['blog_id'];
     // $userID = $_GET['user_id'];
@@ -52,63 +52,130 @@ $pendingComment->bind_result($commentID, $commentDetails, $commentHeading, $user
 
 ?>
 
-<section class="bg-white dark:bg-gray-900">
-    <div class="flex justify-center min-h-screen blog-mob">
-        
-        <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
-            <div class="w-full">
-                <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
-                <?= $blogTitle ?>
-            </h1>
-
-                <p class="mt-4 text-gray-500 dark:text-gray-400">Added on: <?= $blogCreated ?> by <?= $username ?></p>
-                <hr>
-                <div class="mt-6">
-                    <pre class="mt-4 text-gray-500 dark:text-gray-400">
-                        <?= $blogContent ?>
-                    </pre>    
-                </div>   
-                <button 
-                type="submit" 
-                class="mt-10 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                            edit blog
-                        </button>   
+<!-- component -->
+<body class="font-poppins antialiased">
+    <div
+      id="view"
+      class="h-full w-screen flex flex-row"
+      x-data="{ sidenav: true }"
+    >
+      <button
+        @click="sidenav = true"
+        class="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-red-900 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
+      >
+        <svg
+          class="w-5 h-5 fill-current"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <div
+        id="sidebar"
+        class="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
+        x-show="sidenav"
+        @click.away="sidenav = false"
+      >
+        <div class="space-y-6 md:space-y-10 mt-10">
+         
+          
+          <div id="profile" class="space-y-3">
+            <img
+              src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+              alt="Avatar user"
+              class="w-10 md:w-16 rounded-full mx-auto"
+            />
+            <div>
+              <h2
+                class="font-medium text-xs md:text-sm text-center text-red-900"
+              >
+                John Doe
+              </h2>
+              <p class="text-xs text-gray-500 text-center">Administrator</p>
             </div>
-            
+          </div>
+          
+          <div id="menu" class="flex flex-col space-y-2">
+            <a
+              href="<?=BASE_PATH?>a/allBlogs"
+              class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
+            >
+              <svg
+                class="w-6 h-6 fill-current inline-block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                ></path>
+              </svg>
+              <span class="">Blog</span>
+            </a>
+
+           
+            <a
+              href="<?=BASE_PATH?>a/pendingComments"
+              class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+            >
+              <svg
+                class="w-6 h-6 fill-current inline-block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                ></path>
+                <path
+                  d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                ></path>
+              </svg>
+              <span class="">Comments</span>
+            </a>
+           
+           
+            <a
+              href="<?=BASE_PATH?>a/allUsers"
+              class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+            >
+              <svg
+                class="w-6 h-6 fill-current inline-block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                ></path>
+              </svg>
+              <span class="">Users acconts</span>
+            </a>
+
+
+
+
+            <a
+              href="<?=BASE_PATH?>logout"
+              class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-red-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+            >
+              <img src="<?=BASE_PATH?>assets/images/signOut.svg" width="20px" height="20px" class="w-6 h-6 fill-current inline-block"
+                fill="currentColor">
+               <span class="">Sign out</span>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+     
+    
+    
 
-<!-- Comments component -->
-<div class="p-8">
-    <div class="bg-white p-4 rounded-lg shadow-xl py-8 mt-12">
-        <h4 class="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">Pending Comments</h4>
-        <div class="space-y-12 px-2 xl:px-16 mt-12">
-   
-            <div class="mt-4 flex items-center direction-col">
-            <?php while ($pendingComment->fetch()): ?>
-
-                <div>
-                    <div class="flex items-center h-16">
-                        <span class="text-lg text-blue-600 font-bold"><?= $commentHeading ?></span>
-                    </div>
-                    <div class="flex items-center py-2">
-                        <span class="text-gray-500"><?= $commentDetails ?></span>
-
-                    </div>
-                    <div class="flex items-center py-2">
-                        <span class="text-gray-500">Added By: <?= $username ?> </span>
-
-                    </div>
-                    <button 
-                    onclick="window.location.href='../config/publishComment.php?cid=<?= $commentID ?>';"
-                    class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                            Publish
-                        </button>
-                </div>
-                <?php endwhile ?>
-            </div>
-        </div>
-    </div>
 </div>
-
+  </body>
+    
