@@ -10,10 +10,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: ../login/');
-    exit;
-}
+
 
 // Check if 'bid' parameter is set in the URL
 if (isset($_GET['bid'])) {
@@ -182,7 +179,7 @@ $blog->fetch();
 
 
 
-      <form action="<?=BASE_PATH?>account/dashboard/admin/config/editBlogConfig.php?uid=<?= $bid ?>" method="post" enctype="multipart/form-data" class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
+      <form action="<?=BASE_PATH?>account/dashboard/admin/config/editBlogConfig.php?bid=<?= $blogId ?>" method="post" enctype="multipart/form-data" class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
       <div class="heading text-center font-bold text-2xl m-5 text-gray-800">Edit Blog</div>    
 
     <input type="hidden" name="bid" value="<?= $blogId ?>">

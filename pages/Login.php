@@ -25,7 +25,8 @@
 		</form><!-- form -->
 		
 	</section><!-- content -->
-    <?php include '../partials/Footer.php'; ?>
+    
 </div><!-- container -->
 
 
+<?php include '../partials/Footer.php'; ?>

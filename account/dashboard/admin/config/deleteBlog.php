@@ -1,9 +1,28 @@
 <?php
 include '../../../auth/dbConfig.php';
 
-// Check if blog ID is provided
-if (isset($_GET['bid'])) {
-    $blogId = $_GET['bid'];
+
+
+    // Check if 'bid' parameter is set in the URL
+    if (isset($_GET['bid'])) {
+        $blogId = $_GET['bid'];
+
+        // Validate and sanitize $blogId
+        $blogId = filter_var($blogId, FILTER_VALIDATE_INT);
+        if ($blogId === false) {
+            // Handle invalid $blogId, perhaps redirect or show an error message
+            exit("Invalid blog ID");
+        }
+
+        // Rest of your code to retrieve blog information based on $blogId
+    } else {
+        // Handle the case where 'bid' is not set
+        exit("Blog ID not provided");
+
+
+       
+
+    }
     
 
 
@@ -24,7 +43,7 @@ if (isset($_GET['bid'])) {
 
     // Check if any rows were affected in the blog table
     if ($deleteBlog->affected_rows > 0) {
-        echo "Blog deleted successfully.";
+        header('Location: ../../../../a/allBlogs'); ;
     } else {
         echo "No blog found with the specified ID.";
     }
@@ -34,7 +53,6 @@ if (isset($_GET['bid'])) {
     $deleteUserBlog->close();
     $deleteBlog->close();
 
-} else {
-    echo "Blog ID not provided.";
-}
+    
+
 ?>

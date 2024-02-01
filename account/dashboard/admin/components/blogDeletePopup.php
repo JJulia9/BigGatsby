@@ -26,7 +26,7 @@ $blogId = $_GET['bid'];
             <button onclick="window.location.href='../../a/allBlogs'" class="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100 cancel">
                 Cancel
             </button>
-            <button onclick="window.location.href='../../account/dashboard/admin/config/deleteBlog.php?uid=<?= $blogId ?>'" class="confirm-delete mb-2 md:mb-0 bg-red-900 border border-red-900 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-600 delete-yes">Delete</button>
+            <button onclick="window.location.href='../../account/dashboard/admin/config/deleteBlog.php?bid=<?= $blogId ?>'" class="confirm-delete mb-2 md:mb-0 bg-red-900 border border-red-900 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-600 delete-yes">Delete</button>
         </div>
       </div>
     </div>

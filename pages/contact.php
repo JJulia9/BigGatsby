@@ -2,10 +2,7 @@
 <?php include '../partials/Navigation.php'; ?>
 
 <div class="contactWrapper">
-<div class="lineBox">
-        <p class="box__line"> CONTACT US:  + 4473 5757 57575  bigGatsby@gmail.com  @big_Gatsby
-		</p>
-</div>
+
 
 <div class="login-container" >
 	<section id="content">
@@ -33,5 +30,14 @@
 
 
 </div>
+
+
+</div>
+
+<div class="lineBox-contact">
+        <p class="box__line"> CONTACT US:  + 4473 5757 57575  bigGatsby@gmail.com  @big_Gatsby
+		</p>
+      </div>
+
 
 <?php include '../partials/Footer.php'; ?>
